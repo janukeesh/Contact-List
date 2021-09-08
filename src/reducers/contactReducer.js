@@ -6,15 +6,16 @@ import {
   SELECT_CONTACT,
   CLEAR_CONTACT,
   DELETE_SELECTED_CONTACT,
+  SHOW_DISC
 } from "../constant/types";
 
 const intialState = {
   contacts: [
     {
       id: 1,
-      name: "Leanne Graham",
+      name: "Swati",
       username: "Bret",
-      email: "Sincere@april.biz",
+      email: "swati@gmail.com",
       address: {
         street: "Kulas Light",
         suite: "Apt. 556",
@@ -28,16 +29,17 @@ const intialState = {
       phone: "1-770-736-8031 x56442",
       website: "hildegard.org",
       company: {
-        name: "Romaguera-Crona",
+        name: "Google",
         catchPhrase: "Multi-layered client-server neural-net",
         bs: "harness real-time e-markets",
       },
+      disc:false,
     },
     {
       id: 2,
-      name: "Ervin Howell",
+      name: "Siddharth",
       username: "Antonette",
-      email: "Shanna@melissa.tv",
+      email: "siddharth@gmail.com",
       address: {
         street: "Victor Plains",
         suite: "Suite 879",
@@ -51,16 +53,17 @@ const intialState = {
       phone: "010-692-6593 x09125",
       website: "anastasia.net",
       company: {
-        name: "Deckow-Crist",
+        name: "Bosch",
         catchPhrase: "Proactive didactic contingency",
         bs: "synergize scalable supply-chains",
       },
+      disc:false,
     },
     {
       id: 3,
-      name: "Clementine Bauch",
+      name: "Janukeesh",
       username: "Samantha",
-      email: "Nathan@yesenia.net",
+      email: "janukeesh@gmail.com",
       address: {
         street: "Douglas Extension",
         suite: "Suite 847",
@@ -74,16 +77,17 @@ const intialState = {
       phone: "1-463-123-4447",
       website: "ramiro.info",
       company: {
-        name: "Romaguera-Jacobson",
+        name: "Infoedge",
         catchPhrase: "Face to face bifurcated interface",
         bs: "e-enable strategic applications",
       },
+      disc:false,
     },
     {
       id: 4,
-      name: "Patricia Lebsack",
+      name: "Shekhar",
       username: "Karianne",
-      email: "Julianne.OConner@kory.org",
+      email: "shekhar@gmail.com",
       address: {
         street: "Hoeger Mall",
         suite: "Apt. 692",
@@ -97,16 +101,17 @@ const intialState = {
       phone: "493-170-9623 x156",
       website: "kale.biz",
       company: {
-        name: "Robel-Corkery",
+        name: "Bosch",
         catchPhrase: "Multi-tiered zero tolerance productivity",
         bs: "transition cutting-edge web services",
       },
+      disc:false,
     },
     {
       id: 5,
-      name: "Chelsey Dietrich",
+      name: "Priya",
       username: "Kamren",
-      email: "Lucio_Hettinger@annie.ca",
+      email: "priya@gmail.com",
       address: {
         street: "Skiles Walks",
         suite: "Suite 351",
@@ -120,16 +125,17 @@ const intialState = {
       phone: "(254)954-1289",
       website: "demarco.info",
       company: {
-        name: "Keebler LLC",
+        name: "Adobe",
         catchPhrase: "User-centric fault-tolerant solution",
         bs: "revolutionize end-to-end systems",
       },
+      disc:false,
     },
     {
       id: 6,
-      name: "Mrs. Dennis Schulist",
+      name: "Ishan",
       username: "Leopoldo_Corkery",
-      email: "Karley_Dach@jasper.info",
+      email: "Ishan@gmail.com",
       address: {
         street: "Norberto Crossing",
         suite: "Apt. 950",
@@ -143,16 +149,18 @@ const intialState = {
       phone: "1-477-935-8478 x6430",
       website: "ola.org",
       company: {
-        name: "Considine-Lockman",
+        name: "DE Shaw",
         catchPhrase: "Synchronised bottom-line interface",
         bs: "e-enable innovative applications",
       },
+      disc:false,
     },
+    
     {
       id: 7,
-      name: "Kurtis Weissnat",
+      name: "Pankaj",
       username: "Elwyn.Skiles",
-      email: "Telly.Hoeger@billy.biz",
+      email: "pankaj@gmail.com",
       address: {
         street: "Rex Trail",
         suite: "Suite 280",
@@ -166,16 +174,17 @@ const intialState = {
       phone: "210.067.6132",
       website: "elvis.io",
       company: {
-        name: "Johns Group",
+        name: "Airnb",
         catchPhrase: "Configurable multimedia task-force",
         bs: "generate enterprise e-tailers",
       },
+      disc:false,
     },
     {
       id: 8,
-      name: "Nicholas Runolfsdottir V",
+      name: "Vivek",
       username: "Maxime_Nienow",
-      email: "Sherwood@rosamond.me",
+      email: "vivek@gmail.com",
       address: {
         street: "Ellsworth Summit",
         suite: "Suite 729",
@@ -189,16 +198,17 @@ const intialState = {
       phone: "586.493.6943 x140",
       website: "jacynthe.com",
       company: {
-        name: "Abernathy Group",
+        name: "Siemens",
         catchPhrase: "Implemented secondary concept",
         bs: "e-enable extensible e-tailers",
       },
+      disc:false,
     },
     {
       id: 9,
-      name: "Glenna Reichert",
+      name: "Mohit",
       username: "Delphine",
-      email: "Chaim_McDermott@dana.io",
+      email: "mohit@gmail.com",
       address: {
         street: "Dayna Park",
         suite: "Suite 449",
@@ -208,19 +218,21 @@ const intialState = {
           lat: "24.6463",
           lng: "-168.8889",
         },
+        disc:false,
       },
       phone: "(775)976-6794 x41206",
       website: "conrad.com",
       company: {
-        name: "Yost and Sons",
+        name: "Oyo",
         catchPhrase: "Switchable contextually-based project",
         bs: "aggregate real-time technologies",
       },
+      disc:false,
     },
     {
       id: 10,
-      name: "Clementina DuBuque",
-      username: "Moriah.Stanton",
+      name: "Ramesh",
+      username: "ramesh@gmail.com",
       email: "Rey.Padberg@karina.biz",
       address: {
         street: "Kattie Turnpike",
@@ -235,10 +247,11 @@ const intialState = {
       phone: "024-648-3804",
       website: "ambrose.net",
       company: {
-        name: "Hoeger LLC",
+        name: "MasterCard",
         catchPhrase: "Centralized empowering task-force",
         bs: "target end-to-end models",
       },
+      disc:false,
     },
   ],
   contact: null,
@@ -293,6 +306,13 @@ export const contactReducer = (state = intialState, action) => {
       return {
         ...state,
         selectedContacts: [],
+      };
+    case SHOW_DISC:
+      return{
+        ...state,
+        contacts: state.contacts.map((contact) =>
+          contact.id == action.payload.id ? {...contact,disc:true} :{...contact,disc:false}
+        ),
       };
     default:
       return state;

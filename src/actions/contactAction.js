@@ -6,6 +6,7 @@ import {
   SELECT_CONTACT,
   CLEAR_CONTACT,
   DELETE_SELECTED_CONTACT,
+  SHOW_DISC,
 } from "../constant/types";
 
 // actions
@@ -18,6 +19,11 @@ export const addContact = (contact) => ({
 export const getContact = (id) => ({
   type: GET_CONTACT,
   payload: id,
+});
+
+export const showdisc = (contact) => ({
+  type: SHOW_DISC,
+  payload: contact,
 });
 
 // update a contact

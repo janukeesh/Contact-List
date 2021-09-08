@@ -1,0 +1,35 @@
+
+table{
+    width:100%;
+}
+td,th{
+    padding-bottom: 8px;
+}
+th{
+    color:rgba(44, 43, 43, 0.37);
+}
+tr{
+    border-radius: 4px;
+}
+thead{
+    background-color: #f2f2f2;
+}
+tbody{
+    padding-top: 4px;
+}
+.outerwrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:flex-start;
+    position: relative;
+}
+.contacttable{
+    width:70%
+}
+
+.desc{
+    background-color:#f2f2f2;
+    color:black;
+    
+}

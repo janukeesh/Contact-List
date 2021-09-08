@@ -1,0 +1,30 @@
+.createbtn{
+    background-image: linear-gradient(to right,rgb(255, 102, 0), rgb(224, 18, 214));
+    padding:8px;
+    
+}
+.createbtn a{
+    color:white;
+    text-decoration: none;
+    font-weight: 900;
+}
+.searchwrap{
+    width:50%;
+}
+.search{
+    background-color: #f2f2f2;
+    border-radius: 24px;
+    border:none;
+    width:100%;
+    padding: 8px;
+}
+input :focus{
+    border:none;
+}
+.innerwrap{
+    display: flex;
+    justify-content: flex-start;
+}
+.innerwrap > div{
+    margin-right: 16px;
+}

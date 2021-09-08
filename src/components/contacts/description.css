@@ -1,0 +1,8 @@
+.deswrap{
+    width:100%;
+    padding:16px;
+}
+.avatar{
+    justify-content: center;
+    display: flex;
+}

@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Contact from "./Contact";
+import Description from "./description"
+//import styles from "./contacts.scss"
+import "./contacts.css"
 import {
   selectAllContact,
   clearAllContact,
   deleteAllContact,
+  showdisc
 } from "../../actions/contactAction";
 
 const Contacts = () => {
@@ -22,9 +26,11 @@ const Contacts = () => {
       dispatch(clearAllContact());
     }
   }, [selectAll]);
-
+ 
   return (
-    <div>
+   
+    <div className="outerwrap">
+      <div class="contacttable">
       {selctedContcats.length > 0 ? (
         <button
           className="btn btn-danger mb-3"
@@ -33,7 +39,7 @@ const Contacts = () => {
           delete all
         </button>
       ) : null}
-      <table className="table shadow">
+      <table /* className="table shadow" */>
         <thead>
           <tr>
             <th>
@@ -52,18 +58,30 @@ const Contacts = () => {
               </div>
             </th>
             <th>Name</th>
-            <th>Phone</th>
-            <th>E-mail</th>
-            <th>Actions</th>
+            <th>Company</th>
+            <th>Edit</th>
+            {/* <th>E-mail</th>
+            <th>Actions</th> */}
           </tr>
         </thead>
         <tbody>
           {contacts.map((contact) => (
-            <Contact contact={contact} key={contact.id} selectAll={selectAll} />
+            <Contact contact={contact} key={contact.id} selectAll={selectAll}  
+            />
           ))}
+         
         </tbody>
       </table>
     </div>
+      <div class="desc">
+      {
+        contacts.map( (contact) =>{
+        return(
+        contact.disc &&  <Description contact={contact} key={contact.id}/> 
+        )})
+      } 
+    </div>
+</div>
   );
 };
 
