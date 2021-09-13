@@ -14,7 +14,9 @@ import {
 const Contacts = () => {
   const dispatch = useDispatch();
   const [selectAll, setSelectAll] = useState(false);
+  const flag =  useSelector((state) => state.contact.searchflag);
   const contacts = useSelector((state) => state.contact.contacts);
+  const searchedcontacts = useSelector((state) => state.contact.searchedcontacts);
   const selctedContcats = useSelector(
     (state) => state.contact.selectedContacts
   );
@@ -65,10 +67,16 @@ const Contacts = () => {
           </tr>
         </thead>
         <tbody>
-          {contacts.map((contact) => (
+          {flag == false ? contacts.map((contact) => (
+  
             <Contact contact={contact} key={contact.id} selectAll={selectAll}  
             />
-          ))}
+          )):searchedcontacts.map(contact  => (
+            contact && 
+            <Contact contact={contact} selectAll={selectAll}  
+            />
+          ))
+          }
          
         </tbody>
       </table>

@@ -1,0 +1,11 @@
+.sidebar{
+    background-image: linear-gradient(rgb(255, 102, 0), rgb(224, 18, 214));
+    display: flex;
+    flex-direction: column;
+    width:30%;
+    height: 100%;
+    align-items: center
+}
+.sidebar >div{
+    margin-bottom: 8px;
+}

@@ -13,3 +13,13 @@ tbody td a {
     color: #222;
   }
 }
+.App{
+  display: flex;
+  height: 100%;
+  //overflow: auto;
+}
+.App .bar{
+  width:10%;
+  height: 1000px;
+}
+ 

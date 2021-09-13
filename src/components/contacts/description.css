@@ -1,8 +1,20 @@
 .deswrap{
     width:100%;
     padding:16px;
+    border-radius: 16px;
+    border: 1px solid #f2f2f2
 }
 .avatar{
     justify-content: center;
     display: flex;
+}
+.name{
+    font-weight: bold;
+    text-align: center;
+}
+.details{
+    color: rgba(44, 43, 43, 0.431);
+}
+.content > div{
+    margin-bottom: 8px;
 }

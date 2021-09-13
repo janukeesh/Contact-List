@@ -3,24 +3,24 @@ table{
     width:100%;
 }
 td,th{
-    padding-bottom: 8px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    text-align: left;
+   
+}
+td,th:first-child{
+    padding-left: 8px;
 }
 th{
     color:rgba(44, 43, 43, 0.37);
-}
-tr{
-    border-radius: 4px;
+    
 }
 thead{
     background-color: #f2f2f2;
 }
-tbody{
-    padding-top: 4px;
-}
 .outerwrap{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items:flex-start;
     position: relative;
 }
@@ -31,5 +31,5 @@ tbody{
 .desc{
     background-color:#f2f2f2;
     color:black;
-    
+    margin-left: 32px;
 }

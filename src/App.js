@@ -7,24 +7,30 @@ import store from "./store";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AddContact from "./components/contacts/AddContact";
 import EditContact  from "./components/contacts/EditContact";
+import Sidebar from "./components/contacts/Sidebar";
 
 function App() {
   return (
     <Provider store={store}>
       <Router>
         <div className="App">
-          <Navbar />
-          <div className="container">
-            <div className="py-3">
-              <Switch>
-                <Route exact path="/" component={Contacts} />
-                <Route exact path="/contacts/add" component={AddContact} />
-                <Route
-                  exact
-                  path="/contacts/edit/:id"
-                  component={EditContact}
-                />
-              </Switch>
+          <div className="bar">
+          <Sidebar/>
+          </div>
+          <div style={{width:"90%",marginTop: "5%",marginRight:"2%"}}>
+            <Navbar />
+            <div>
+              <div className="py-3">
+                <Switch>
+                  <Route exact path="/" component={Contacts} />
+                  <Route exact path="/contacts/add" component={AddContact} />
+                  <Route
+                    exact
+                    path="/contacts/edit/:id"
+                    component={EditContact}
+                  />
+                </Switch>
+              </div>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 .createbtn{
     background-image: linear-gradient(to right,rgb(255, 102, 0), rgb(224, 18, 214));
     padding:8px;
-    
+    border-radius: 4px;
 }
 .createbtn a{
     color:white;
@@ -10,6 +10,7 @@
 }
 .searchwrap{
     width:50%;
+    position: relative;
 }
 .search{
     background-color: #f2f2f2;
@@ -18,13 +19,20 @@
     width:100%;
     padding: 8px;
 }
-input :focus{
-    border:none;
+
+input:focus{
+  outline: none;
 }
 .innerwrap{
     display: flex;
     justify-content: flex-start;
+    margin-top: 8px;
 }
 .innerwrap > div{
     margin-right: 16px;
+}
+.searchicon{
+    position: absolute;
+    right:5%;
+    top:30%
 }

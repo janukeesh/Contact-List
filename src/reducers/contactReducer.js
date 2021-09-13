@@ -6,7 +6,8 @@ import {
   SELECT_CONTACT,
   CLEAR_CONTACT,
   DELETE_SELECTED_CONTACT,
-  SHOW_DISC
+  SHOW_DISC,
+  SEARCH_CONTACT
 } from "../constant/types";
 
 const intialState = {
@@ -256,6 +257,8 @@ const intialState = {
   ],
   contact: null,
   selectedContacts: [],
+  searchedcontacts:[],
+  searchflag:false,
 };
 
 export const contactReducer = (state = intialState, action) => {
@@ -314,6 +317,14 @@ export const contactReducer = (state = intialState, action) => {
           contact.id == action.payload.id ? {...contact,disc:true} :{...contact,disc:false}
         ),
       };
+      case SEARCH_CONTACT:
+        return{
+          ...state,
+          searchflag:true,
+          searchedcontacts:state.contacts.map(contact =>
+            contact.name.toLowerCase().includes(action.payload.toLowerCase())  ? contact : null
+          )
+        }
     default:
       return state;
   }
